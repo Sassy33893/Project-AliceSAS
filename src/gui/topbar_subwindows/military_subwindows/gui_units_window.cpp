@@ -669,6 +669,7 @@ std::unique_ptr<element_base> military_units_window<T>::make_child(sys::state& s
 		} else {
 			ptr->set_button_text(state, text::produce_simple_string(state, "military_build_navy_label"));
 		}
+		ptr->base_data.data.button.txt = dcon::text_key{};
 		return ptr;
 	} else if(name == "unit_listbox") {
 		return make_element_by_type<military_units_listbox<T>>(state, id);
